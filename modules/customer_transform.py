@@ -1,4 +1,4 @@
-"""Transform module
+"""Nama: Jafar Umar Assadulloh
 """
  
 import tensorflow as tf

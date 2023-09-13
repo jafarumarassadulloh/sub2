@@ -1,4 +1,4 @@
-"""Training module
+"""Nama: Jafar Umar Assadulloh
 """
  
 import os

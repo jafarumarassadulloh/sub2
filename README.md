@@ -1,13 +1,14 @@
-# Final Submission : Machine Learning Pipeline - Crab Age Prediction
+# Final Submission : Machine Learning Pipeline - Customer Classification
 | | Deskripsi |
 | ----------- | ----------- |
-| Dataset | [Crab Age Prediction dataset](https://www.kaggle.com/datasets/sidhus/crab-age-prediction) |
-| Masalah | Kepiting merupakan hewan air yang menjadi salh satu primadona untuk dijadikan massakan. Kepiting yang diperoleh untuk dimasak biasanya didapatkan dari tangkapan alam liar maupun penangkaran buatan manusia. Dengan melihat kepopuleran kepiting tidak mengherankan jika konsumsinya cukup tinggi dan juga permintaan atas kualitas kepiting juga harus diperhatikan. Oleh karena itu, dibuat model machine learning ini untuk memprediksi umur kepiting agar dapat menjamin kualitas dan keberlangsungan hidup kepiting. |
-| Solusi machine learning | Model machine learning yang dikembangkan didasari dengan jenis kelamin, berat, dan ukuran kepiting |
+| Dataset | [Customer Segmentation Classification dataset](https://www.kaggle.com/datasets/kaushiksuresh147/customer-segmentation) |
+| Masalah | Dalam dunia pemasaran diperlukan strategi yang tepat dalam melakukan pendekatan pada custemer. Salah satu strategi yang dapat dilakukan adalah dengan menglasifikasikan customer sehingga pendekatan dapat dilakukan dengan tepat. Kasus ini biasa terjadi pada seorang Digital Marketer untuk menentukan target iklan mereka|
+| Solusi machine learning | Model machine learning yang dikembangkan didasari dengan Gender (Jenis Kelamin), Ever_Married (Pernah Menikah), Age (Umur), Graduated(Lulus Kuliah), Profession(Pekerjaan), Work_Experience(Pengalaman Kerja), Spending_Score (Skor Pengeluaran), dan Family_Size (Jumlah Anggota Keluarga)
+ |
 | Metode pengolahan | Pada kasus ini, terdapat sembilan feature dimana delapan akan digunakan untuk features klasifikasi, dan satu sebagai class, terdapat dua categorical feature dan enam numerical, kemudian akan dilakukan split data menjadi 80:20 untuk data train dan eval. Proses transform akan dilakukan renaming untuk feature yang telah ditransform, one hot encoding untuk class data |
-| Arsitektur model | Untuk arsitektur model sendiri, untuk tiap layer menggunakan Dense 256, Dense 64, Dense 16 dengan activation relu, kemudian layer terakhir menggunakan Dense 1 dengan activation sigmoid karena akan mengklasifikasi class yang hanya memiliki dua value yaitu diabetes dan tidak diabetes. Untuk model compile menggunakan optimizers Adam dengan learning_rate 0.001, loss binary_crossentropy dengan metrics BinaryAccuracy |
+| Arsitektur model | Arsitektur yang digunakan dalam projek ini terdiri dari beberapa layer. Untuk tiap layer menggunakan Dense 256, Dense 64, Dense 16 dengan activation relu, kemudian layer terakhir menggunakan Dense 1 dengan activation sigmoid untuk menglasifikasi class yang memiliki dua nilai yaitu 1 dan 0. Untuk model compile menggunakan optimizers Adam dengan learning_rate 0.001, loss binary_crossentropy dengan metrics BinaryAccuracy |
 | Metrik evaluasi | Metrik evaluasi yang digunakan yaitu AUC, Precision, Recall, ExampleCount dan BinaryAccuracy |
-| Performa model | Untuk performa model, di |
+| Performa model | Peformanya sendiri menunjukan nilai yang bagus, dengan nilai akurasi diatas 80%  |
 | Opsi deployment | Untuk deployment, sistem ini akan dideploy menggunakan platform railway |
-| Web app | [diabetes-classification](mlops2-production.up.railway.app)|
+| Web app | [Customer-Classification](https://sub2-production.up.railway.app/v1/models/customer-model:predict)|
 | Monitoring | Monitoring pada sistem ini dilakukan menggunakan prometheus dan grafana. Disini hanya dilakukan proses monitoring untuk menampilkan request yang masuk pada sistem yang akan menamplkan status pada tiap request yang dilakukan, pada sistem ini terdapat tiga status yang ditampilkan yaitu apabila proses request pada sistem klasifikasi not found, invalid argument dan proses klasifikasi berhasil ditandakan dengan ok |
