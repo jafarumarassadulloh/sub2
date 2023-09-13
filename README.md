@@ -10,4 +10,4 @@
 | Performa model | Peformanya sendiri menunjukan nilai yang bagus, dengan nilai akurasi diatas 80%  |
 | Opsi deployment | Untuk deployment, sistem ini akan dideploy menggunakan platform railway |
 | Web app | [Customer-Classification](https://sub2-production.up.railway.app/v1/models/customer-model:predict)|
-| Monitoring | Monitoring pada sistem ini dilakukan menggunakan prometheus dan grafana. Disini hanya dilakukan proses monitoring untuk menampilkan request yang masuk pada sistem yang akan menamplkan status pada tiap request yang dilakukan, pada sistem ini terdapat tiga status yang ditampilkan yaitu apabila proses request pada sistem klasifikasi not found, invalid argument dan proses klasifikasi berhasil ditandakan dengan ok |
+| Monitoring | Monitoring pada sistem ini dilakukan menggunakan prometheus |
