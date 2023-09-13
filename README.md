@@ -1,0 +1,13 @@
+# Final Submission : Machine Learning Pipeline - Crab Age Prediction
+| | Deskripsi |
+| ----------- | ----------- |
+| Dataset | [Crab Age Prediction dataset](https://www.kaggle.com/datasets/sidhus/crab-age-prediction) |
+| Masalah | Kepiting merupakan hewan air yang menjadi salh satu primadona untuk dijadikan massakan. Kepiting yang diperoleh untuk dimasak biasanya didapatkan dari tangkapan alam liar maupun penangkaran buatan manusia. Dengan melihat kepopuleran kepiting tidak mengherankan jika konsumsinya cukup tinggi dan juga permintaan atas kualitas kepiting juga harus diperhatikan. Oleh karena itu, dibuat model machine learning ini untuk memprediksi umur kepiting agar dapat menjamin kualitas dan keberlangsungan hidup kepiting. |
+| Solusi machine learning | Model machine learning yang dikembangkan didasari dengan jenis kelamin, berat, dan ukuran kepiting |
+| Metode pengolahan | Pada kasus ini, terdapat sembilan feature dimana delapan akan digunakan untuk features klasifikasi, dan satu sebagai class, terdapat dua categorical feature dan enam numerical, kemudian akan dilakukan split data menjadi 80:20 untuk data train dan eval. Proses transform akan dilakukan renaming untuk feature yang telah ditransform, one hot encoding untuk class data |
+| Arsitektur model | Untuk arsitektur model sendiri, untuk tiap layer menggunakan Dense 256, Dense 64, Dense 16 dengan activation relu, kemudian layer terakhir menggunakan Dense 1 dengan activation sigmoid karena akan mengklasifikasi class yang hanya memiliki dua value yaitu diabetes dan tidak diabetes. Untuk model compile menggunakan optimizers Adam dengan learning_rate 0.001, loss binary_crossentropy dengan metrics BinaryAccuracy |
+| Metrik evaluasi | Metrik evaluasi yang digunakan yaitu AUC, Precision, Recall, ExampleCount dan BinaryAccuracy |
+| Performa model | Untuk performa model, di |
+| Opsi deployment | Untuk deployment, sistem ini akan dideploy menggunakan platform railway |
+| Web app | [diabetes-classification](mlops2-production.up.railway.app)|
+| Monitoring | Monitoring pada sistem ini dilakukan menggunakan prometheus dan grafana. Disini hanya dilakukan proses monitoring untuk menampilkan request yang masuk pada sistem yang akan menamplkan status pada tiap request yang dilakukan, pada sistem ini terdapat tiga status yang ditampilkan yaitu apabila proses request pada sistem klasifikasi not found, invalid argument dan proses klasifikasi berhasil ditandakan dengan ok |

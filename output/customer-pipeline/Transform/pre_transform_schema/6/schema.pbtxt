@@ -1,0 +1,157 @@
+feature {
+  name: "Age"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Ever_Married"
+  type: BYTES
+  domain: "Ever_Married"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Family_Size"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Gender"
+  type: BYTES
+  domain: "Gender"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Graduated"
+  type: BYTES
+  domain: "Graduated"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Profession"
+  type: BYTES
+  domain: "Profession"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Segmentation"
+  type: INT
+  bool_domain {
+  }
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Spending_Score"
+  type: BYTES
+  domain: "Spending_Score"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Work_Experience"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+string_domain {
+  name: "Ever_Married"
+  value: "No"
+  value: "Yes"
+}
+string_domain {
+  name: "Gender"
+  value: "Female"
+  value: "Male"
+}
+string_domain {
+  name: "Graduated"
+  value: "No"
+  value: "Yes"
+}
+string_domain {
+  name: "Profession"
+  value: "Artist"
+  value: "Doctor"
+  value: "Engineer"
+  value: "Entertainment"
+  value: "Executive"
+  value: "Healthcare"
+  value: "Homemaker"
+  value: "Lawyer"
+  value: "Marketing"
+}
+string_domain {
+  name: "Spending_Score"
+  value: "Average"
+  value: "High"
+  value: "Low"
+}
